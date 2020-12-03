@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Even Test Page</title>
+    <style>
+        body {
+            background-Color: 'lightyellow';
+        }
+
+        .shadow {
+            box-shadow: green 30px 30px 10px;
+            width: 200px;
+            height: 80px;
+            background-color: white;
+        }
+
+        .noShadow {
+            border-radius: 10%;
+            height: 80px;
+            width: 300px;
+            background-color: lightskyblue;
+        }
+
+        h1 {
+            color: red;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body class='newClass'>
+    <h1 id='test' class='noShadow newClass' onclick='addShadow()'>Edge Tech</h1>
+    <hr>
+    <p class='shadow newClass'>Just a basic paragraph with shadow</p>
+    <hr>
+    <p class='noShadow'>Just a basic paragraph no shadow</p>
+    <script>
+        let test = document.getElementById('test');
+
+        function addShadow() {
+            if (test.classList.contains('shadow'))
+                test.className = 'noShadow';
+            else
+                test.className = 'shadow';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body {
+  background-color: darkgrey;
+}
+
+h1 {
+  background-color: lightgrey;
+  color: blue;
+}
+
+/* Below here are just tags I added for fun */
+h1:first-letter {
+  color:lightcoral;
+  font-size: 50px;
+}
+
+li {
+  color: white;
+}

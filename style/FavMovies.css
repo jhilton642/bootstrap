@@ -1,0 +1,130 @@
+body {
+  background: url("../images/rolled film.jpg")top / contain repeat;
+  margin: 0px;
+  color: black;
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+  width: 260px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 40%
+}
+
+#banner {
+  background: URL("../images/marquee blue.png") top / contain no-repeat;
+  width: 260px;
+  height: 130px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header {
+  margin: 0px;
+  background: URL("../images/movie film border.jpg") top / contain repeat;
+  height: 100px;
+  top: 0px;
+  position: fixed;
+  width: 100%
+}
+
+.navbar-primary ul {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  width: 100%;
+  background-color: #30261a;
+}
+
+.navbar-primary ul li {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  float: right;
+}
+
+.navbar-primary a {
+  text-decoration: none;
+  color: white;
+}
+
+#btnLogin {
+  margin-right: 4px;
+  color: #fff;
+  border-radius: 25px;
+  background-color: transparent;
+  position: relative;
+  border: 0;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 1px #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#btnSearch {
+  background: URL("../images/magnifyingGlass white.png") top / contain no-repeat;
+  border-style: none;
+  width: 20px;
+  cursor: pointer;
+}
+
+.movie-list-section {
+  margin-top: 140px;
+}
+
+.movie-list-section ol {
+  background: URL("../images/movie film border.jpg") top / 100% 100% no-repeat;
+  display: table;
+  padding: 60px 20px 60px 40px;
+  list-style-type: none;
+  counter-reset: li;
+}
+
+.movie-list-section ol>li {
+  counter-increment: step-counter;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 20px;
+  width: 300px;
+
+}
+
+.movie-list-section ol>li::before {
+  content: "-"counter(li) "-";
+  position: absolute;
+  counter-increment: li;
+  right: 20%;
+  top: 10%;
+  font-size: 4em;
+}
+
+.movie-list-section ul {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+#quote {
+  background-color: #e6e4d8;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  background: URL("../images/movie film border.jpg") top / contain repeat;
+  height: 30px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px;
+}

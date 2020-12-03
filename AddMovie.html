@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Add a Movie</title>
+</head>
+
+<body>
+  <h1>Add a Movie</h1>
+  <form class="" action="" method="get">
+    <fieldset>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="title">Title: </label>
+            </td>
+            <td>
+              <input type="text" name="title" id="title" value="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="releaseDate">Release Date: </label>
+            </td>
+            <td>
+              <input type="text" name="releaseDate" value="" id="releaseDate">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="director">Director: </label>
+            </td>
+            <td>
+              <input type="text" name="director" value="" id="director">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="rating">Rating: </label>
+            </td>
+            <td>
+              <select name="rating" id="rating">
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="hours">Hours: </label>
+            </td>
+            <td>
+              <input type="number" name="hours" min="0" max="4" value="" id="hours">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="minutes">Minutes: </label>
+            </td>
+            <td>
+              <input type="number" name="minutes" min="0" max="59" value="" id="minutes">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="plot">Plot: </label>
+            </td>
+            <td>
+              <textarea name="plot" rows="8" cols="80" id="plot"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="upload">Upload Image: </label>
+            </td>
+            <td>
+              <input type="file" id="upload">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" name="" value="Save">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+  </form>
+</body>
+
+</html>

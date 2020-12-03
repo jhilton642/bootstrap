@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+</head>
+
+<body>
+    <div>
+        <label for="movie">Movie: </label>
+        <input id="movie" type="text">
+        <button onclick='getMovieDetails(movie.value)'>Get Movies</button>
+        <div id='url'></div>
+        <div id='list'></div>
+
+        <div id="json"></div>
+    </div>
+    <script src="scripts/movies.js"></script>
+</body>
+
+</html>

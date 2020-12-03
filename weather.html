@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Current Weather</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: .1em .1em 0 rgba(0, 0, 0, 0.3);
+            font-size: 1.3em;
+            height: 100vh;
+            background-image: linear-gradient(to right top, #869ba5, #8ccdeb, #56bfe9, #2eb0e4, #12aee7);
+            /* background-image: linear-gradient(to right top, red, blue, yellow, green, black); */
+}
+
+        h1 {
+            margin: 0 auto;
+            font-size: 2.2em;
+            text-align: center;
+            color: #fff;
+            font-size: 5em;
+        }
+
+        body.sunny {
+            background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+        }
+
+        body.cloudy {
+            background-image: linear-gradient(to right top, #4f5457, #5a7e8f, #5296b3, #2d9ec7, #09b8f8);
+        }
+
+        body.rainy {
+            background-image: linear-gradient(to right top, #272929, #282e2d, #43615e, #43928e, #20bcc2);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <label for="where">Where: </label>
+        <input id="where" type="text">
+        <button onclick='weatherBallon(where.value)'>Get Weather</button>
+        <div id="description"></div>
+        <img id='icon' src="">
+        <div id="location"></div>
+        <div id="sunrise"></div>
+        <h1 id="temp"></h1>
+        <br>
+        <div id="json"></div>
+    </div>
+    <script>
+        let where = document.getElementById('where');
+        const key = 'dc6e40e10806f79c1a2354eaad1e04bd';
+
+        function weatherBallon(cityID) {
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID + '&appid=' + key)
+                .then(function (resp) {
+                    return resp.json()
+                }) // Convert data to json
+                .then(function (data) {
+                    drawWeather(data);
+                })
+                .catch(function () {
+                    // catch any errors
+                });
+        }
+
+        function drawWeather(d) {
+            var fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+            var description = d.weather[0].description;
+            
+            document.getElementById('json').innerHTML        = JSON.stringify(d);
+            document.getElementById('description').innerHTML = "<strong>" + description + "</strong>";
+            document.getElementById('temp').innerHTML = fahrenheit + '&deg;';
+            document.getElementById('location').innerHTML = d.name;
+            document.getElementById('sunrise').innerHTML = new Date(d.sys.sunrise*1000);
+            document.getElementById('icon').src = 'http://openweathermap.org/img/wn/' + d.weather[0].icon + '@2x.png';
+
+            if (description.indexOf('rain') > 0) {
+                document.body.className = 'rainy';
+            } else if (description.indexOf('cloud') > 0) {
+                document.body.className = 'cloudy';
+            } else if (description.indexOf('sunny') > 0) {
+                document.body.className = 'sunny';
+            } else {
+                document.body.className = 'clear';
+            }
+        }
+        window.onload = function () {
+            weatherBallon('Arlington, Texas');
+        }
+    </script>
+</body>
+
+</html>

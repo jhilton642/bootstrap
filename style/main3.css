@@ -1,0 +1,72 @@
+body {
+  background: url("../images/The Anthropomorphic Cabinet.jpg") top / cover no-repeat fixed;
+  color: white;
+  margin: 0px;
+}
+
+header {
+  background-color: #62433f;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  background-color: #62433f;
+  color: white;
+  padding: 20px;
+  margin: 40px;
+}
+
+img { 
+  margin: 0px 40px;
+}
+
+figure {
+  border: 5px double #62433f;
+  background-color: #98644e;
+  padding: 5px;
+}
+
+footer {
+  background-color: #62433f;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/*
+
+#img1 {
+  border-width:10px;
+  border-style: dashed;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner {
+  width: 80%;
+  height: 10%;
+}
+
+a:visited {
+  color:green;
+} */
+
+/* 
+.round {
+  border: 5px solid #98644e;
+  border-radius: 30px;
+}
+
+.blue {
+  border: 15px dotted blue;
+  border-radius: 50px;
+} */

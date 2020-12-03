@@ -1,0 +1,21 @@
+header {
+  background: URL("../images/movie film border.jpg");
+  background-size: 120px 100px;
+  height: 100px;
+}
+
+footer {
+  background:  URL("../images/movie film border.jpg");
+  background-size: 120px 100px;
+  height: 100px;
+}
+
+footer em, strong{
+  background: white;
+}
+
+h1 {
+  margin: 20px;
+  padding: 50px;
+  border: 11px solid black;
+}

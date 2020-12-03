@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Review</title>
+    <style>
+    h1 {
+            color: aqua;
+            background-color: chartreuse;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            padding:10px;
+        }
+
+        .indentLeft {
+            margin: 10px;
+            padding:30px;
+        }
+
+        .x {
+            border-color: black;
+            border-width:5px;
+            border-style: dotted;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='h1' class='x indentLeft'>HTML Review</h1>
+    <h1 id='h2' class='x'>HTML Review</h1>
+    <input type="color" id='color' onchange='changeColor()'>
+    <label for="">State of Mind</label>
+    <select id="state" onchange='updateImage()'>
+        <option value='dis'>Distress</option>
+        <option value='gri'>Grief</option>
+        <option value='joy'>Joy</option>
+        <option value='hap'>Happiness</option>
+        <option value='fea'>Fear</option>
+    </select>
+    <br>
+    <img id='img' src="" height='160px' width=200px>
+    <br>
+    <label for="other">Gender</label>
+    <br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br>
+
+    <label for="visa">Credit Card</label>
+    <br>
+    <input type="radio" id="visa" name="cc" value="Visa">
+    <label for="visa">Visa</label><br>
+    <input type="radio" id="mastercard" name="cc" value="Master Card">
+    <label for="mastercard">Master Card</label><br>
+    <input type="radio" id="amex" name="cc" value="Am Ex">
+    <label for="amex">Am Ex</label><br>
+
+    <label for="rain">Optin for Email</label>
+    <input type="checkbox" id="rain" name="rain" value="optin">
+
+</body>
+<script>
+    function changeColor() {
+        let x = document.getElementsByClassName
+        document.body.style.background = document.getElementById('color').value;
+    }
+
+    function updateImage() {
+        let img = document.getElementById('img');
+        let state = document.getElementById('state').value;
+        if (state == 'dis') {
+            img.src = 'images/distress.jpg';
+        } else if (state == 'gri') {
+            img.src = 'images/grief.jpg';
+        } else if (state == 'joy') {
+            img.src = 'images/joy.jpg';
+        } else if (state == 'hap') {
+            img.src = 'images/happiness.jpg';
+        } else if (state == 'fea') {
+            img.src = 'images/fear.jpg';
+        } else {
+            img.src = "";
+        }
+    }
+</script>
+
+</html>

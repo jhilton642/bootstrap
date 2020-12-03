@@ -1,0 +1,10 @@
+.container { position: relative; }
+.position { position: absolute; font-size: 18px; }
+
+.center { top: 50%; left: 0; width: 100%; text-align: center; }
+.bottomleft  { bottom: 18px; left:  16px; }
+.bottomright { bottom: 8px; right: 16px; }
+.topleft     { top:    18px; left:  16px; }
+.topright    { top:    8px; right: 16px; }
+
+img { width: 100%; height: auto; opacity: 0.3; }

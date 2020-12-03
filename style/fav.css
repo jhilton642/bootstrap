@@ -1,0 +1,92 @@
+body {
+  background: URL("../images/rolled film.jpg");
+  background-size: contain;
+  color: white;
+  margin: 0px;
+}
+
+header {
+  background: URL("../images/movie film border.jpg") top / cover;
+  background-size: 120px 100px;
+  height: 100px;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+footer {
+  background: URL("../images/movie film border.jpg");
+  background-size: 120px 100px;
+  height: 100px;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+footer em, strong {
+  background: transparent;
+}
+
+figure {
+  border: 5px double #62433f;
+  background-color: #98644e;
+  padding: 5px;
+  display: table;
+}
+
+section {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.banner {
+  background: URL("images/marquee.png") top / contain no-repeat;
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  z-index: 1;
+  width: 20%;
+  height: 10%
+}
+
+.quote {
+  width: 35%;
+}
+
+.center-in-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marquee {
+  background-image: url("images/marquee.jpg");
+  background-repeat: repeat-x;
+}
+
+.navbar-nav a {
+  color: white;
+}
+
+.navbar-nav li>a:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+#head {
+  background-image: url('images/marquee.jpg');
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+}
+
+.showcase img {
+  width: 100%
+}

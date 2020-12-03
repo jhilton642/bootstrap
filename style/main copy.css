@@ -1,0 +1,62 @@
+body {
+  /* background: linear-gradient(to bottom right, blue,yellow,red); */
+  background: url("../images/The Anthropomorphic Cabinet.jpg") top / cover no-repeat;
+  background-color: grey;
+}
+header{
+  background: url("../images/The Anthropomorphic Cabinet.jpg");
+  height: 150px;
+
+}
+footer{
+  background-image: url("../images/Butterfly Sails.jpg");
+  height: 50px;
+
+}
+
+h3{
+  background-color: lightgrey;
+  border-radius: 12px;
+  color: blue;
+  margin: 10px  0px 20px 60px;
+  padding: 1px 5px 10px 10px;
+  border: 2px dashed black;
+  width: 180px;
+}
+
+h3:first-letter{
+  background-color: lightgrey;
+  color: red;
+}
+
+#rcorners {
+    border-radius: 5px 20px;
+    border: 2px solid white;
+    margin: 5px;
+    padding: 40px;
+    width: 220px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-primary ul {
+  margin: 0px;
+  background-color: darkblue;
+}
+
+.navbar-primary  ul li {
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+}
+
+.navbar-primary a {
+  text-decoration: none;
+  color: white;
+}
+
+.stay {
+  position: fixed;
+}

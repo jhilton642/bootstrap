@@ -1,0 +1,90 @@
+/* File: cssTransforms.css */
+div {
+	width: 200px;
+	height: 100px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	position: inline;
+	transition: 2s ease;
+}
+
+#translate, #translate3d {
+	background-color: red;
+}
+
+#rotate, #rotate3d {
+	background-color: blue;
+}
+
+#drop {
+	background-color: darkblue;
+}
+
+#scale, #scale3d {
+	width: 100px;
+	height: 100px;
+	background-color: gold;
+	transition: .5s ease;
+}
+
+#skew, #skew3d {
+	background-color: purple;
+	box-shadow: 10px -10px 0px grey,
+		inset	 5px   5px 5px aqua,
+				-20px  20px 5px black;
+}
+
+#matrix, #matrix3d {
+	background-color: green;
+	box-shadow: 10px 10px 10px orange;
+}
+
+/* 2D Transforms */
+#drop:hover {
+	transform: translate(0px, 50px);
+	background-color: yellow;
+	width: 300px;
+	height: 80px;
+}
+
+#translate:hover {
+	transform:translate(350px, -50px);
+	transform:rotate(360deg);
+}
+
+#rotate:hover {
+	transform: rotate(20deg);
+}
+
+#scale:hover {
+	transform: scale(1.5, 1.5);
+	box-shadow: 10px 10px 5px grey;
+}
+
+#scale3d:hover {
+	box-shadow: 10px 10px 5px grey;
+	transform: scaleX(1.5);
+}
+
+#skew:hover {
+	transform: skew(-30deg, -15deg);
+}
+
+#matrix:hover {
+	transform: matrix(1.5, -1, 2, 0.5, 100, 25);
+}
+
+/* 3D Transforms */
+#translate3d:hover {
+	box-shadow: 10px 10px 5px grey;
+	transform: translate3d(350px, -50px, 20px);
+}
+
+#rotate3d:hover {
+	transform: rotateY(180deg);
+}
+
+#matrix3d:hover {
+	box-shadow: 10px 10px 5px grey;
+	transform: matrix3d(1, 2, 3, 0, 0, 2, 1, 0, 0, 2, .1, 0, 0, 1.2, 0, .5);
+}

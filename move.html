@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>positioning</title>
+    <style>
+        .high {
+            background-color: red;
+            color: white;
+        }
+
+        .low {
+            background-color: yellow;
+            color: black;
+        }
+
+        .hit {
+            background-color: green;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="guess">Guess a number</label>
+    <input id='guess' type="number">
+    <button onclick="test()">Make a Guess</button>
+    <div id='answer'>How did you do?</div>
+</body>
+<script>
+    let randNum = Math.floor(Math.random() * 100);
+    let guess = document.getElementById('guess');
+    let ans = document.getElementById('answer');
+    let count = 0;
+    function test() {
+        count++;
+        let num = guess.value;
+        if (num > randNum) {
+            ans.className = 'high';
+            ans.innerText = 'too high!: guess # ' + count;
+        } else if (num < randNum) {
+            ans.className = 'low';
+            ans.innerText = 'too low!: guess # ' + count;
+        } else {
+            ans.className = 'hit';
+            ans.innerText = 'Yay!: guess # ' + count;
+            randNum = Math.floor(Math.random() * 100);
+        }
+    }
+</script>
+
+</html>

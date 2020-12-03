@@ -1,0 +1,60 @@
+/* File: main.css */
+.myButtons {
+    padding: 8px 14px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+}
+
+body {
+	font-family: Ubuntu, sans-serif;
+	background-color: #aaa;
+}
+
+h1 {
+	font-size: 50px;
+	margin-left: 10px;
+}
+
+main {
+	margin: auto;
+	padding: .5rem;
+	max-width: 1000px;
+	background-color: #eee;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #80b;
+}
+
+table {
+	border: 2px solid grey;
+	border-collapse: collapse;
+	box-shadow: 10px 10px 10px rgb(98,140,166);
+	margin: 10px;
+}
+
+thead, tfoot {
+	background-color: #7fb9c2;
+	font-size: 1.25rem;
+}
+
+td, th {
+	text-align: center;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #e0ffed;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #e9ffed;
+}
+

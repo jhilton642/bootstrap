@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SD 101 - Final Lab Exam</title>
+    <style>
+        body {
+            background: #6595a3;
+            padding: 0 20px;
+            color: white;
+        }
+
+        span {
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Create span rule here to make error messages bold and red */
+        h3 {
+            font-size: 26px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: lightblue;
+        }
+
+        form {
+            padding: 25px;
+            border: 1px solid black;
+        }
+
+        a {
+            color: lightgray;
+        }
+
+        .clear {
+            clear: both;
+            overflow: hidden;
+            height: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Voter E-Registration</h3>
+    <hr />
+
+    <!--forms begin-->
+    <form name="myForm" id="myForm" action="#">
+        <!--fieldset tag puts box around form-->
+        <fieldset>
+            <label for="Name">Name</label>
+            <input type="text" id="Name" name="Name" />
+            <span id="NameMessage"></span>
+            <p>
+                <label for="Gender">Gender</label>
+                <input id="GenderM" name="Gender" type="radio" value="male" />
+                male
+                <input id="GenderF" name="Gender" type="radio" value="female" />
+                female
+                <span id="GenderMessage"></span>
+            </p>
+            <p>
+                <label for="Citizen">Are you a U.S. Citizen?</label>
+                <input id="Citizen" type="checkbox" name="Citizen" /> check if yes
+                <span id="CitizenMessage"></span>
+            </p>
+            <p>
+                <label for="County">County of Residence</label>
+                <select id="County" name="County">
+                    <option value=""></option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Collin">Collin</option>
+                    <option value="Denton">Denton</option>
+                    <option value="Johnson">Johnson</option>
+                    <option value="Tarrant">Tarrant</option>
+                </select>
+                <span id="CountyMessage"></span>
+            </p>
+            <p>
+                <label for="Age">Age</label>
+                <input type="number" id="Age" name="Age" min="16" />
+                <span id="AgeMessage"></span>
+            </p>
+            <p>
+                <label for="Email">Email</label>
+                <input type="email" name="Email" id="email">
+                <span id="EmailMessage"></span>
+            </p>
+            <p>
+                <button type="button" id="sub">Submit</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+<script>
+    // Do all of these items listed when the user click the submit button
+    // Validate Name to make sure it isn't empty.  Issue a bold and red statement in NameMessage span if it is.
+    document.addEventListener('DOMContentLoaded', function () {
+        let submit = document.getElementById('sub');
+        submit.addEventListener('click', function () {
+            let txt = document.getElementById('Name');
+            console.log(txt.value);
+            if (txt.value.length == 0) {
+                let nameerror = document.getElementById('NameMessage');
+                nameerror.innerText = 'Name Required'
+            }
+            let eml = document.getElementById('email')
+            if (eml.value.length == 0) {
+                let emailerror = document.getElementById('EmailMessage');
+                emailerror.innerText = 'Email Required';
+            }
+            let gen = document.getElementsByName('Gender');
+            if (gen[0].checked == true) {} else if (gen[1].checked ==
+                true) {} else { // no checked            
+                let generror = document.getElementById('GenderMessage');
+                generror.innerText = 'Gender Required';
+            }
+            let citi = document.getElementById('Citizen')
+            if (citi.checked == false) {
+                let citierror = document.getElementById('CitizenMessage')
+                citierror.innerHTML = 'Exit the Appliction'
+            }
+            let count = document.getElementById('County')
+            if (count.value == "") {
+                let counterror = document.getElementById('CountyMessage')
+                counterror.innerHTML = 'Select County'
+            }
+            let age = document.getElementById('Age')
+            if (age.value < 18) {
+                let ageerror = document.getElementById('AgeMessage')
+                ageerror.innerHTML = 'Not Eligible to Vote'
+            }
+        });
+    })
+    // Place message in GenderMessage span of radio button indicating required field ifleft blank.
+    // Validate citizenship status.  Message in the CitizenMessage span if not a citizen and exit function
+    // check the user's age.  Issue an alert if they are under 18 and not eligible to vote
+    // Place a message in the span of the select form if no county is selected
+    // make sure email is not left blank and provide message if it is
+</script>
+
+</html>
